@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f6e-gH-ref">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="euA-3o-p7H">
+            <objects>
+                <viewController id="f6e-gH-ref" customClass="DetailViewController" customModule="Kushiterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GM0-37-rVl"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1v-hO-7wv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XHn-o9-03t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="seR-cN-hgx">
+                                <rect key="frame" x="16" y="60" width="343" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="irp-m3-DFE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q39-K0-kIL">
+                                <rect key="frame" x="144" y="563" width="88" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="RHf-hs-aHG"/>
+                                    <constraint firstAttribute="width" constant="88" id="jNK-mc-4sM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTap:" destination="f6e-gH-ref" eventType="touchUpInside" id="0Ir-rn-Dg4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q39-K0-kIL" firstAttribute="centerX" secondItem="XHn-o9-03t" secondAttribute="centerX" id="EPX-YF-NxJ"/>
+                            <constraint firstItem="seR-cN-hgx" firstAttribute="top" secondItem="GM0-37-rVl" secondAttribute="bottom" constant="40" id="Eqt-zC-7we"/>
+                            <constraint firstItem="r1v-hO-7wv" firstAttribute="top" secondItem="Q39-K0-kIL" secondAttribute="bottom" constant="60" id="iZi-gQ-tWF"/>
+                            <constraint firstItem="seR-cN-hgx" firstAttribute="leading" secondItem="XHn-o9-03t" secondAttribute="leadingMargin" id="mWn-Ak-2Gv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="seR-cN-hgx" secondAttribute="trailing" id="qJL-xj-XoS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="XHn-o9-03t" id="QX6-0M-QQn"/>
+                        <outlet property="imageView" destination="seR-cN-hgx" id="PJz-r6-SqU"/>
+                        <outlet property="imageViewHeightLayoutConstraint" destination="irp-m3-DFE" id="b0A-Ov-0C7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0T-9n-AKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>
